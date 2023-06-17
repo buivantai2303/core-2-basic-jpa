@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -49,18 +50,8 @@ public class PersonDataAccessService implements PersonDao {
     }
 
     @Override
-    public Optional<Person> deletePersonById(UUID id) {
-        final String sql = "DELETE FROM person WHERE id = ?";
-
-        Person person = jdbcTemplate.queryForObject(
-                sql,
-                new Object[]{id},
-                (resultSet, i) -> {
-                    UUID personid = UUID.fromString(resultSet.getString("id"));
-                    String name = resultSet.getString("name");
-                    return new Person (personid, name);
-                });
-        return Optional.ofNullable(person);
+    public int deletePersonById(UUID id) {
+        return 0;
     }
 
     @Override
