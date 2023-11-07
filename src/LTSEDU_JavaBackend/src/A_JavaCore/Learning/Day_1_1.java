@@ -24,5 +24,13 @@ public class Day_1_1 {
         // ++i change before the command is executed
         // i++ change after the command is executed
         // EXAMPLE: int soNguyen_1 = 1, print(soNguyen_1++) will present: 1 and print(++soNguyen_1) is 2
+
+        System.out.println(Math.abs(-soNguyen_1)); // Tính giá trị tuyệt đối
+        System.out.println(Math.sqrt(soNguyen_1)); // Tính căn bậc 2
+        System.out.println(Math.ceil(Math.sqrt(soNguyen_2))); // Tìm số nguyên nhỏ nhất mà vẫn lớn hơn hoặc bằng x
+        System.out.println(Math.floor(Math.sqrt(soNguyen_2))); // Tìm số nguyên lớn nhất mà vẫn lớn hơn hoặc bằng x
+        System.out.println(Math.exp(soNguyen_1)); // Tính e mũ x
+        System.out.println(Math.sin(soNguyen_1));
+
     }
 }
