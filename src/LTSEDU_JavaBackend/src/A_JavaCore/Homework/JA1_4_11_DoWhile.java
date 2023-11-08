@@ -9,13 +9,20 @@ public class JA1_4_11_DoWhile {
         int NUM;
 
         do {
-            System.out.println("Enter your number: ");
-            NUM = scanner.nextInt();
+            System.out.print("Enter your number: ");
 
-            if (NUM >= 1 && NUM <= 100) {
-                System.out.println("Within the range of 1 to 100");
+            if (scanner.hasNextInt()) {
+                NUM = scanner.nextInt();
+
+                if (NUM >= 1 && NUM <= 100) {
+                    System.out.println("Within the range of 1 to 100");
+                } else {
+                    System.out.println("Outside the range of 1 to 100. Enter again!");
+                }
             } else {
-                System.out.println("Outside the range of 1 to 100. Enter again!");
+                System.out.println("Invalid input. Please enter an integer.");
+                scanner.next();
+                NUM = 0;
             }
         } while (NUM < 1 || NUM > 100);
     }
