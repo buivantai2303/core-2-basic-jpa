@@ -1,4 +1,4 @@
-package A_JavaCore.Homework.JA_1;
+package A_JavaCore.Homework.JA1_1;
 
 public class JA1_1_05_Math_Operator {
     public static void main(String[] args) {

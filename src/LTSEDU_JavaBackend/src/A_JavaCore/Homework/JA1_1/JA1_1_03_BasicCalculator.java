@@ -1,4 +1,4 @@
-package A_JavaCore.Homework.JA_1;
+package A_JavaCore.Homework.JA1_1;
 import java.util.Scanner;
 
 public class JA1_1_03_BasicCalculator {
