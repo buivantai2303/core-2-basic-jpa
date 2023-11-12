@@ -20,12 +20,12 @@ public class JA1_5_07_ReverseString {
         System.out.print("Enter your first string: ");
         String str = scanner.nextLine();
 
-        System.out.print("Enter your first string: ");
+        System.out.print("Enter your second string: ");
         String str_2 = scanner.nextLine();
 
         StringBuilder strB = new StringBuilder(str_2);
 
-        if (str.equals(strB.reverse())){
+        if (str.contentEquals(strB.reverse())){
             System.out.println("Your string: " + str);
         } else {
             System.out.println("String 1: " + str);
