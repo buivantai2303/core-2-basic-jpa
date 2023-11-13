@@ -15,7 +15,7 @@ public class JA1_5_08_StandardizeTheString {
     }
 
     public static String Scan(String fullName){
-        String Email = fullName.replaceAll("\\s", "").toLowerCase();
+        String Email = fullName.replaceAll("\\s+", "").toLowerCase();
         return Email + "@hvitclan.com";
     }
 }
