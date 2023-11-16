@@ -1,4 +1,4 @@
-package A1_Java_Developer.J1_JavaCore.JA_1_5;
+package A1_Java_Developer.J1_JavaCore.JA1_5;
 
 public class JA1_5_09_SpecialCharCounting {
     public static void main(String[] args) {

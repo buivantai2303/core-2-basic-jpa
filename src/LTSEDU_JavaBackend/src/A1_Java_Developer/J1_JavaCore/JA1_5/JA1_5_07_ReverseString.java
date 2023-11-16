@@ -1,4 +1,4 @@
-package A1_Java_Developer.J1_JavaCore.JA_1_5;
+package A1_Java_Developer.J1_JavaCore.JA1_5;
 
 
 //Viết chương trình đảo ngược 1 chuỗi.
