@@ -1,4 +1,4 @@
-package A1_Java_Developer.J1_JavaCore.JA1_Test;
+package A1_Java_Developer.J1_JavaCore.JA1_FinalExam;
 
 import java.util.Scanner;
 
