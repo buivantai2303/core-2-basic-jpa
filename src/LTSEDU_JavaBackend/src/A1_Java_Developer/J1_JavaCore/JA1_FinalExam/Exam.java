@@ -66,8 +66,8 @@ public class Exam {
 
                     System.out.print("SNT: ");
 
-                    for(int i = 2;i<=num;i++){
-                        while (num%i==0){
+                    for(int i = 2; i <= num; i++){
+                        while (num % i == 0){
                             if (PrimeNum(i)){
                                 System.out.print(i+" ");
                                 num = num / i;

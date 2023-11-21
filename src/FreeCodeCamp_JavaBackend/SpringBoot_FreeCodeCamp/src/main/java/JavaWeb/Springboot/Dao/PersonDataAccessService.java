@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository("postgres")
-public class PersonDataAccessService implements PersonDao {
+public class PersonDataAccessService implements JavaWeb.Springboot.Dao.PersonDao {
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
