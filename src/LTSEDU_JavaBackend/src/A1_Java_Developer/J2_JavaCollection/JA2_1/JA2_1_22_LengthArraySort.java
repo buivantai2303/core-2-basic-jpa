@@ -17,8 +17,6 @@ public class JA2_1_22_LengthArraySort {
             arr[i] = scanner.nextLine();
         }
 
-        List<Integer> list = new ArrayList<>();
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[j].length() > arr[i].length()) {

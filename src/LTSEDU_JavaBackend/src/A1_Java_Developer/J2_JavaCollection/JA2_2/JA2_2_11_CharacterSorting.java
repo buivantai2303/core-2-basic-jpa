@@ -8,7 +8,6 @@ public class JA2_2_11_CharacterSorting {
 
         System.out.println("Enter your string: ");
         String line = scanner.nextLine();
-
         String[] element = line.split("\\s+");
 
         List<String> list = new ArrayList<>(Arrays.asList(element));
