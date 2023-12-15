@@ -7,21 +7,18 @@ import java.util.Scanner;
 
 public class JA3_1_09_ReverseList {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your strings (comma-separated): ");
-        String input = scanner.nextLine();
-
         List<String> stringList = new ArrayList<>();
-        String[] inputArray = input.split("\\s+");
+        stringList.add("Nguyen Duc Toan");
+        stringList.add("Nguyen Hoang Truong");
+        stringList.add("Nguyen Dong Khanh");
 
-        for (String str : inputArray) {
-            stringList.add(str.trim());
+        displayReverseString(getReverseString(stringList));
+    }
+
+    static void displayReverseString(List<String> list) {
+        for (String i : list){
+            System.out.println(i);
         }
-
-        List<String> reversedList = getReverseString(stringList);
-
-        System.out.println("Original List: " + stringList);
-        System.out.println("Reversed List: " + reversedList);
     }
 
     static List<String> getReverseString(List<String> list) {

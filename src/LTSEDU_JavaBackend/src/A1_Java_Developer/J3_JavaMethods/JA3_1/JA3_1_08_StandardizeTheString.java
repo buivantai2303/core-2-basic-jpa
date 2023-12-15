@@ -2,7 +2,7 @@ package A1_Java_Developer.J3_JavaMethods.JA3_1;
 
 import java.util.Scanner;
 
-public class JA3_1_08_StandardlizeTheString {
+public class JA3_1_08_StandardizeTheString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your string: ");
