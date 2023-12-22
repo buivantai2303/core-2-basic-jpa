@@ -2,7 +2,7 @@ package A1_Java_Developer.J3_JavaMethods.JA3_2;
 
 import java.util.Scanner;
 
-public class JA3_3_01_FindTheSmallestMissingPositiveIntegerInTheArray {
+public class JA3_2_01_FindTheSmallestMissingPositiveIntegerInTheArray {
     public static void main(String[] args) {
         int result = inputArray();
         System.out.println("The smallest missing positive integer is: " + result);
