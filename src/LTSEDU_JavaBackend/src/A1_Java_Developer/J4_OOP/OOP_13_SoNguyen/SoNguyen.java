@@ -80,6 +80,5 @@ public class SoNguyen {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your value: ");
         GiaTri = scanner.nextInt();
-
     }
 }
