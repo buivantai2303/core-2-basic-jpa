@@ -85,6 +85,5 @@ public class C_PolynomialsOfDegree5NotMissPolynomialsOfDegree3 {
         }
 
         return x;
-
     }
 }
