@@ -3,50 +3,38 @@ package LTSEDU_JavaBackend.src.A1_Java_Developer.J4_OOP.OOP_13_SoNguyen;
 import java.util.Scanner;
 
 public class SoNguyen {
-    private int GiaTri;
-    private boolean LaSoChan, LaNguyenTo, LaSoDoiXung;
+    private int giaTri;
+    private Boolean LaSoChan, LaNguyenTo, LaSoDoiXung;
 
     public int getGiaTri() {
-        return GiaTri;
+        return giaTri;
     }
 
     public void setGiaTri(int giaTri) {
-        GiaTri = giaTri;
+        this.giaTri = giaTri;
+        LaSoChan = KiemTraChan();
+        LaNguyenTo = KiemTraNguyenTo();
+        LaSoDoiXung = KiemTraDoiXung();
     }
 
-    public boolean isLaSoChan() {
-        KiemTraChan();
+    public Boolean getLaSoChan() {
         return LaSoChan;
     }
 
-    public void setLaSoChan(boolean laSoChan) {
-        LaSoChan = laSoChan;
-    }
-
-    public boolean isLaNguyenTo() {
-        KiemTraNguyenTo();
+    public Boolean getLaNguyenTo() {
         return LaNguyenTo;
     }
 
-    public void setLaNguyenTo(boolean laNguyenTo) {
-        LaNguyenTo = laNguyenTo;
-    }
-
-    public boolean isLaSoDoiXung() {
-        KiemTraDoiXung();
+    public Boolean getLaSoDoiXung() {
         return LaSoDoiXung;
     }
 
-    public void setLaSoDoiXung(boolean laSoDoiXung) {
-        LaSoDoiXung = laSoDoiXung;
+    private Boolean KiemTraChan(){
+        return giaTri % 2 == 0;
     }
 
-    public void KiemTraChan(){
-        LaSoChan = GiaTri % 2 == 0;
-    }
-
-    public void KiemTraDoiXung() {
-        int n = GiaTri;
+    public Boolean KiemTraDoiXung() {
+        int n = giaTri;
         int reverse = 0;
         int temp = n;
 
@@ -56,30 +44,44 @@ public class SoNguyen {
             temp /= 10;
         }
 
-        LaSoDoiXung = (n == reverse);
+        return n == reverse;
     }
 
-    public void KiemTraNguyenTo (){
-        LaNguyenTo = (GiaTri > 1) && (GiaTri % 2 != 0);
-        for (int i = 3; i <= Math.sqrt(GiaTri); i += 2) {
-            if (GiaTri % i == 0) {
-                LaNguyenTo = false;
-                break;
+    public Boolean KiemTraNguyenTo (){
+        if (giaTri < 2) return false;
+
+        for (int i = 2; i <= Math.sqrt(giaTri); i+=2) {
+            if (giaTri % i == 0) {
+                return false;
             }
         }
+
+        return true;
     }
 
-    public SoNguyen(int giaTri, boolean laSoChan, boolean laNguyenTo, boolean laSoDoiXung) {
-        GiaTri = giaTri;
-        LaSoChan = laSoChan;
-        LaNguyenTo = laNguyenTo;
-        LaSoDoiXung = laSoDoiXung;
-    }
-
+    private Scanner scanner = new Scanner(System.in);
     public SoNguyen(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your value: ");
-        GiaTri = scanner.nextInt();
+        setGiaTri(NhapSo("Enter your value: ", "Wrong value input, enter agann!"));
+    }
 
+    public void InThongTin(){
+        System.out.println("So " + giaTri + " " + LaSoChan + " la so chan, " + LaNguyenTo + " la nguyen to, " +  LaSoDoiXung + " la doi xung");
+    }
+
+    private int NhapSo(String msgNhap, String msgErr){
+        boolean ok = false;
+        int so = 0;
+        do{
+            try {
+                System.out.print(msgNhap);
+                so = scanner.nextInt();
+                ok = true;
+            } catch (Exception e){
+                System.out.println(msgErr);
+                scanner.nextLine();
+            }
+        } while (!ok);
+
+        return so;
     }
 }
