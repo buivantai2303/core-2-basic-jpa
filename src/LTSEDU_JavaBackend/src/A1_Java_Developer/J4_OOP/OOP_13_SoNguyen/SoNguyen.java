@@ -63,6 +63,12 @@ public class SoNguyen {
     public SoNguyen(){
         setGiaTri(NhapSo("Enter your value: ", "Wrong value input, enter agann!"));
     }
+    public SoNguyen(int n){
+        setGiaTri(n);
+    }
+    public SoNguyen Cong (SoNguyen n){
+        return new SoNguyen(giaTri + n.getGiaTri());
+    }
 
     public void InThongTin(){
         System.out.println("So " + giaTri + " " + LaSoChan + " la so chan, " + LaNguyenTo + " la nguyen to, " +  LaSoDoiXung + " la doi xung");
