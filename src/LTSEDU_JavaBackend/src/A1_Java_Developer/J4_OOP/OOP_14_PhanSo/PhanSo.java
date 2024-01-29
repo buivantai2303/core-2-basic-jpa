@@ -71,7 +71,6 @@ public class PhanSo {
         return tuSo + "/" + mauSo;
     }
 
-
     public void InThongTin() {
         System.out.println("Phan so: " + getTuSo() + "/" + getMauSo());
     }
