@@ -1,0 +1,82 @@
+package LTSEDU_JavaBackend.src.A1_Java_Developer.J4_OOP.Final_Exam;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class InputHelper {
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static int IntHelper(String Message, String Error) {
+        System.out.print(Message);
+        int Value = 0;
+
+        try {
+            Value = Integer.parseInt(scanner.nextLine());
+            return Value;
+        } catch (Exception e) {
+            System.out.println(Error);
+            scanner.nextLine();
+            return IntHelper(Message, Error);
+        }
+    }
+
+    public static boolean booleanHelper(String message, String error) {
+        System.out.print(message);
+
+        try {
+            String input = scanner.nextLine();
+
+            if (input.equals("1")) {
+                return true;
+            } else if (input.equals("0")) {
+                return false;
+            } else {
+                throw new IllegalArgumentException("Nhập không hợp lệ. Vui lòng nhập 1 hoặc 0.");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(error);
+            return booleanHelper(message, error);
+        }
+    }
+
+
+    public static double DoubleHelper(String Message, String Error) {
+        System.out.print(Message);
+        double Value = 0;
+
+        try {
+            Value = Double.parseDouble(scanner.nextLine());
+            return Value;
+        } catch (Exception e) {
+            System.out.println(Error);
+            scanner.nextLine();
+            return DoubleHelper(Message, Error);
+        }
+    }
+
+    public static String StringHelper(String Message, String Error) {
+        System.out.print(Message);
+        String Value = scanner.nextLine();
+        if (Value == null || Value.trim().isEmpty() || Value.length() > 10) {
+            System.out.println(Error);
+            return StringHelper(Message, Error);
+        }
+        return Value;
+    }
+
+    public static LocalDate LocalDateHelper(String Message, String Error) {
+        System.out.print(Message);
+        LocalDate Value = null;
+
+        try {
+            Value = LocalDate.parse(scanner.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            return Value;
+        } catch (Exception e) {
+            System.out.println(Error);
+            scanner.nextLine();
+            return LocalDateHelper(Message, Error);
+        }
+    }
+
+}
